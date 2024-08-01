@@ -66,5 +66,5 @@ npm run cypress:open
 
 Exécuter les tests en mode headless :
 ```bash
-npm run cypress:run
+npx cypress run
 ```
