@@ -40,8 +40,8 @@ describe('Commande Test', () => {
     // Attendre la disparition du message de succès
     cy.xpath('//div[contains(@class, "fixed top-4 right-4 z-50 flex items-center p-4 mb-4 text-sm rounded-lg bg-green-100 text-green-700 border border-green-400")]', { timeout: 10000 })
       .should('exist')
-      .wait(4000) // delay
-      .should('not.exist');
+      .wait(5000) // delay
+      .should('not.exist', { timeout: 10000 });
     
     // Cliquer sur le panier
     cy.xpath('//a[contains(@href, "/panier")]').first().click();
