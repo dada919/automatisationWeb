@@ -24,6 +24,8 @@ describe('Connexion Test', () => {
             throw new Error('Connexion échouée: Aucun message de succès ou d\'erreur trouvé.');
           }
         });
+
+      cy.wait(4000);
       
       // Attendre la disparition du message
       cy.get('div.bg-green-100.text-green-700').should('not.exist');
