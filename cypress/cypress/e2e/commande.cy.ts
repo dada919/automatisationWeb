@@ -1,7 +1,7 @@
 import 'cypress-xpath';
 
 describe('Commande Test', () => {
-  it('should complete the order process successfully', () => {
+  it('Passage d une commande réussie lors de l affichage de la page "thanks"', () => {
     // Lien du site
     cy.visit('/');
     
