@@ -21,11 +21,10 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Naviger dans le répertoire cypress
-        run: cd cypress
-
       - name: Installation des dépendances
         run: npm install
+        working-directory: ./cypress
 
       - name: Exécuter les tests
         run: npx cypress run
+        working-directory: ./cypress
