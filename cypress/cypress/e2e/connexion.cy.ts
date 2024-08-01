@@ -1,13 +1,11 @@
 describe('Connexion Test', () => {
     it('connexion réussie lors de l affichage du message de succès', () => {
-      // Lien du site
-      cy.visit('http://gamingavenue.ddns.net/');
+      // redirection vers le site (enregistrer dans le fichier cypress.config.ts)
+      cy.visit('/');
       
-      // Connexion
+      // Connexion en utilisant le fixture de login
       cy.get('a[href="/login"]').click();
-      cy.get('input[name="email"]').type('damienraunier@gmail.com');
-      cy.get('input[name="password"]').type('Damien');
-      cy.get('[data-cy=login-submit]').click();
+      cy.login();
       
       // Vérifier le message de succès ou d'erreur
       cy.get('div.fixed.top-4.right-4.z-50.flex.items-center.p-4.mb-4.text-sm.rounded-lg')
