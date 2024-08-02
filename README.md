@@ -61,7 +61,7 @@ npm install
 
 Ouvrir l'interface graphique de Cypress :
 ```bash
-npm run cypress:open
+npx cypress open
 ```
 
 Exécuter les tests en mode headless :
